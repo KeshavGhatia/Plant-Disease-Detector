@@ -1,0 +1,569 @@
+/* ✅ Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fdf9;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* ✅ Detection Section */
+.detector-section {
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.detector-section h2 {
+  font-size: 1.5rem;
+  color:#2e7d32;
+  margin-bottom: 10px;
+}
+
+.detector-section p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ✅ Upload Card */
+.upload-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #2e7d32;
+  color: #fff;
+}
+
+/* Preview Area */
+.preview-area {
+  border: 2px dashed #c8e6c9;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  background: url('https://www.transparenttextures.com/patterns/camera-lens.png') repeat;
+  background-size: cover;
+}
+
+.preview-area img {
+  max-width: 120px;
+  opacity: 0.8;
+}
+
+#fileName {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Detect Button */
+.detect-btn {
+  background: #2e7d32;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.detect-btn:hover {
+  background: #1b5e20;
+}
+
+/* ✅ Hamburger hidden by default (desktop view) */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #2e7d32;
+}
+
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+  /* Hide nav links initially */
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top: 60px; /* below navbar */
+    right: 20px;
+    width: 200px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Show nav links when menu is active */
+  .nav-right.active {
+    display: flex;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+  }
+
+  /* Mobile menu links */
+  .nav-right a {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+/* ✅ Remedies Store Section */
+.store-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.store-section h2 {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.store-section p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* ✅ Remedies Grid */
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* ✅ Remedy Card */
+.remedy-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.remedy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.remedy-card img {
+  max-width: 80px;
+  margin-bottom: 15px;
+}
+
+.remedy-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #2e7d32;
+}
+
+.remedy-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: block;
+  font-weight: bold;
+  color: #1b5e20;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+/* ✅ Buy Button */
+.buy-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.buy-btn:hover {
+  background: #1b5e20;
+}
+
+/* ✅ Store Controls (Search + Filter) */
+.store-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.store-controls input,
+.store-controls select {
+  padding: 10px 14px;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.store-controls input:focus,
+.store-controls select:focus {
+  border: 1px solid #2e7d32;
+}
+/* ✅ Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  padding: 15px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;  /* ✅ pushes logo left & menu right */
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* ✅ Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: 20px;  /* ✅ Adds spacing */
+  transition: 0.3s ease;
+}
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* ✅ Animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #27ae60;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    display: none;
+    padding: 15px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f8fdf9, #e8f5e9);
+  color: #333;
+  line-height: 1.6;
+}
+.btn, .buy-btn, .detect-btn {
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn:hover, .buy-btn:hover, .detect-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}.remedy-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.remedy-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.3);
+}
+
+/* ✅ Dropdown menu styling */
+.nav-links {
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px 0;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  width: 220px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  animation: dropdownFade 0.3s ease;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #2e7d32;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+/* ✅ Smooth animation */
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌿 Universal Section Headings */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* ✅ Underline with gradient */
+h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  border-radius: 2px;
+}
+
+/* 🌿 Subheadings (Card titles, etc.) */
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 8px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* ✨ Simple Fade-in Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Result Box Styling */
+.result-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #e8f5e9;
+  border: 2px solid #2e7d32;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.result-box h3 {
+  color: #1b5e20;
+  margin-bottom: 10px;
+}
+
+.result-box p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ===== Footer ===== */
+footer {
+  background: #f8f9fa;  /* very light gray */
+  color: #333;          /* dark gray text */
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+footer h3, footer h4 {
+  color: #222;  /* darker headings */
+  margin-bottom: 15px;
+}
+
+footer p {
+  color: #555;
+  font-size: 14px;
+}
+
+footer input, footer textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+footer button {
+  background: #2e7d32;   /* green button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background: #256628;
+}
+
+footer .social-icons a {
+  margin: 0 8px;
+  color: #2e7d32;  /* green icons */
+  font-size: 18px;
+  text-decoration: none;
+}
+
+footer .social-icons a:hover {
+  color: #1b5e20;
+}
